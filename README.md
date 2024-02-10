@@ -92,3 +92,37 @@ Enhance the script to retrieve and save information only for the top 25 movies i
 Extend the functionality of the script to filter and display information only for the films released in the 2000s. Update the code to include a condition that checks the release year and prints only the relevant entries meeting the specified criteria.
 
 **Note:** Solutions for the practice problems are not provided. Feel free to use the discussion forums if you need assistance or want to discuss your approach with others.
+
+
+# Database Access using Python Script
+
+Using databases is an important and useful method of sharing information. To preserve repeated storage of the same files containing the required data, it is a good practice to save the said data on a database on a server and access the required subset of information using database management systems.
+
+## Objectives
+
+In this lab, you'll learn how to:
+
+- Create a database using Python
+- Load data from a CSV file as a table to the database
+- Run basic "queries" on the database to access the information
+
+## Scenario
+
+Consider a dataset of employee records that is available with an HR team in a CSV file. As a Data Engineer, you are required to create the database called STAFF and load the contents of the CSV file as a table called INSTRUCTORS.
+
+### Dataset Headers:
+
+- ID: Employee ID
+- FNAME: First Name
+- LNAME: Last Name
+- CITY: City of residence
+- CCODE: Country code (2 letters)
+
+## Reading the CSV file
+
+To read the CSV using Pandas, you can use the `read_csv()` function. Since this CSV does not contain headers, you can use the keys of the `attribute_dict` dictionary as a list to assign headers to the data.
+
+```python
+file_path = '/home/project/INSTRUCTOR.csv'
+df = pd.read_csv(file_path, names=attribute_list)
+
