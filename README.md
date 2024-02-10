@@ -126,3 +126,97 @@ To read the CSV using Pandas, you can use the `read_csv()` function. Since this 
 file_path = '/home/project/INSTRUCTOR.csv'
 df = pd.read_csv(file_path, names=attribute_list)
 
+
+# Module Summary: Extract, Transform, Load (ETL)
+
+## ETL Process Overview
+
+ETL is the process of extracting large amounts of data from multiple sources and formats and transforming it into one specific format before loading it into a database or target file.
+
+## Web Scraping
+
+Web scraping is a process that can be used to extract information automatically from a website using the two Python modules “Requests” and “BeautifulSoup”.
+
+## Data Parsing
+
+- Use the `xml` library to parse XML data.
+- Use the `pandas` library to parse CSV and JSON data.
+
+## Loading Data to Database
+
+- Load a Pandas data frame to an SQL database object using the `to_sql()` method.
+
+## Querying Database
+
+- Use the Pandas `read_sql()` method to query a database table. This function returns a Pandas data frame with the output to the query.
+
+## Storing and Retrieving Processed Data
+
+- Processed data can be stored as a table in a database and retrieved from it using queries, with the Pandas and SQLite libraries.
+
+
+# ETL Project: Extract, Transform, Load
+
+## Estimated Effort: 5 mins
+
+## Project Overview
+
+In this practice project, you will apply the skills acquired through the course to create a complete ETL pipeline for accessing data from a website, processing it, and meeting specific requirements.
+
+## Project Scenario
+
+An international firm aiming to expand its business globally has recruited you as a junior Data Engineer. Your task is to create an automated script that extracts the list of all countries in order of their GDPs in billion USDs (rounded to 2 decimal places) from the International Monetary Fund (IMF) website. The code will be used to update this information twice a year.
+
+### Data Source
+
+The required data can be found on [this webpage](<webpage_url>).
+
+### Data Output
+
+The extracted information needs to be made accessible in two ways:
+
+1. A JSON file named 'Countries_by_GDP.json'
+2. A table 'Countries_by_GDP' in a database file 'World_Economies.db' with attributes 'Country' and 'GDP_USD_billion.'
+
+## Project Tasks
+
+Your boss expects the following functionalities in the Python code 'etl_project_gdp.py':
+
+1. Extraction of data from the provided webpage.
+2. Transformation of the data to order countries by their GDPs.
+3. Loading the data into a JSON file 'Countries_by_GDP.json.'
+4. Loading the data into a database table 'Countries_by_GDP' in 'World_Economies.db.'
+5. Running a query on the database table to display entries with more than a 100 billion USD economy.
+6. Logging the entire process of execution in a file named 'etl_project_log.txt.'
+
+## Example Code Structure
+
+```python
+import requests
+from bs4 import BeautifulSoup
+import json
+import sqlite3
+import logging
+
+# Function to extract data from the webpage
+def extract_data():
+    # ... (use Requests and BeautifulSoup)
+
+# Function to transform and order data
+def transform_data(data):
+    # ... (order data by GDP)
+
+# Function to load data into JSON and SQLite
+def load_data(data):
+    # ... (save data to JSON and SQLite)
+
+# Function to run query on the database
+def run_query():
+    # ... (execute query on the database)
+
+# Function to log the execution process
+def log_execution(message):
+    # ... (use logging library to log messages)
+
+if __name__ == "__main__":
+    # ... (call functions in sequence)
