@@ -1,0 +1,2 @@
+Start Apache Airflow in the lab environment.
+start_airflow
