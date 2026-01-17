@@ -1,6 +1,6 @@
 # Data-Engineering
 
-# Data Engineering Lab: Extract, Transform, and Load Data using Python
+# Data Engineering Lab: Extract, Transform, and Load Data using Python.
 
 ## Introduction
 
